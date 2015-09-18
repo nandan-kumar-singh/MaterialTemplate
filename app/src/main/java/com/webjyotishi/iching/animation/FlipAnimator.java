@@ -90,7 +90,7 @@ public class FlipAnimator extends Animation {
         final Matrix matrix = t.getMatrix();
 
         camera.save();
-        camera.translate(0.0f, (float) (1550.0 * Math.sin(degrees)), (float) (1550.0 * Math.sin(radians)));
+        camera.translate(0.0f, (float) (1550.0 * Math.sin(radians)), (float) (1550.0 * Math.sin(radians)));
         camera.rotateX(degrees);
         // camera.rotateZ(degrees);
         camera.getMatrix(matrix);
