@@ -1,4 +1,4 @@
-package com.androidflood.materialtemplate.activity;
+package com.webjyotishi.iching.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,8 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.androidflood.materialtemplate.R;
-import com.androidflood.materialtemplate.activity.FragmentDrawer;
+import com.webjyotishi.iching.R;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 

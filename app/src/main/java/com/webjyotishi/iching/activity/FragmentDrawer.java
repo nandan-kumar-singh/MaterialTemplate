@@ -1,4 +1,4 @@
-package com.androidflood.materialtemplate.activity;
+package com.webjyotishi.iching.activity;
 
 /**
  * Created by Ravi on 29/07/15.
@@ -21,28 +21,23 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.androidflood.materialtemplate.R;
-import com.androidflood.materialtemplate.adapter.NavigationDrawerAdapter;
-import com.androidflood.materialtemplate.model.NavDrawerItem;
+import com.webjyotishi.iching.R;
+import com.webjyotishi.iching.adapter.NavigationDrawerAdapter;
+import com.webjyotishi.iching.model.NavDrawerItem;
 
 public class FragmentDrawer extends Fragment {
 
     private static String TAG = FragmentDrawer.class.getSimpleName();
-
+    private static String[] titles = null;
     private RecyclerView recyclerView;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
     private NavigationDrawerAdapter adapter;
     private View containerView;
-    private static String[] titles = null;
     private FragmentDrawerListener drawerListener;
 
     public FragmentDrawer() {
 
-    }
-
-    public void setDrawerListener(FragmentDrawerListener listener) {
-        this.drawerListener = listener;
     }
 
     public static List<NavDrawerItem> getData() {
@@ -56,6 +51,10 @@ public class FragmentDrawer extends Fragment {
             data.add(navItem);
         }
         return data;
+    }
+
+    public void setDrawerListener(FragmentDrawerListener listener) {
+        this.drawerListener = listener;
     }
 
     @Override
@@ -132,6 +131,10 @@ public class FragmentDrawer extends Fragment {
         void onLongClick(View view, int position);
     }
 
+    public interface FragmentDrawerListener {
+        void onDrawerItemSelected(View view, int position);
+    }
+
     static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
 
         private GestureDetector gestureDetector;
@@ -175,9 +178,5 @@ public class FragmentDrawer extends Fragment {
         }
 
 
-    }
-
-    public interface FragmentDrawerListener {
-        void onDrawerItemSelected(View view, int position);
     }
 }

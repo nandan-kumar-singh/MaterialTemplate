@@ -1,4 +1,4 @@
-package com.androidflood.materialtemplate.adapter;
+package com.webjyotishi.iching.adapter;
 
 /**
  * Created by Ravi on 29/07/15.
@@ -14,8 +14,8 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-import com.androidflood.materialtemplate.R;
-import com.androidflood.materialtemplate.model.NavDrawerItem;
+import com.webjyotishi.iching.R;
+import com.webjyotishi.iching.model.NavDrawerItem;
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();

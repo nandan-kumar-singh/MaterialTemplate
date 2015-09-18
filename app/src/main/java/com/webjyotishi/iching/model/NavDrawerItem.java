@@ -1,4 +1,4 @@
-package com.androidflood.materialtemplate.model;
+package com.webjyotishi.iching.model;
 
 /**
  * Created by Ravi on 29/07/15.
